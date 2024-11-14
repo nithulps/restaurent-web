@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.bgimg {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://assets.digitalcontent.marksandspencer.app/image/upload/w_640,q_auto,f_auto/MS_FD_F01C_29420636_NC_X_EC_0');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.icons {
+    position: absolute;
+    display: none;
+    color: white;
+    right: 5%;
+}
+
+#check {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    padding-right: 40px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 950px) {
+    .icons {
+        display: flex;
+    }
+
+    #cancel {
+        display: none;
+    }
+
+    #check:checked~.icons #menu {
+        display: none;
+    }
+
+    #check:checked~.icons #cancel {
+        display: block;
+    }
+
+    #check:checked~.icons .nav {
+        display: block;
+        height: 20rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 20px;
+        padding: 20px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: none;
+    }
+
+    .nav a {
+        display: block;
+        font-size: 1rem;
+        margin: 1rem 0px;
+        text-align: center;
+    }
+}
+
+.hometext {
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    top: 45%;
+}
+
+.hometext h1 {
+    letter-spacing: 0.8rem;
+}
+
+.hometext h3 {
+    margin: 25px;
+    color: rgb(248, 136, 0);
+    font-family: cursive;
+}
+
+button {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    border: solid 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.btn1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
+}
+
+.btn1:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+}
+
+.btn2 {
+    background-color: rgb(248, 136, 0);
+}
+
+.btn2:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* second page */
+.second {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://c1.wallpaperflare.com/preview/967/303/707/vintage-boards-wood-the-background-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.booktable {
+    max-width: 550px;
+    background-color: #121217;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.booktable h1 {
+    text-align: center;
+}
+
+.border {
+    height: 2px;
+    background-color: #ca8e46;
+    width: 50px;
+    margin-top: 10px;
+    display: block;
+    font-size: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.second-text {
+    max-width: 400px;
+    color: white;
+
+}
+
+.second-text h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.second-text h3 {
+    font-size: 20px;
+    color: #ffb255;
+    font-family: "EB Garamond", serif;
+    margin-bottom: 20px;
+
+}
+
+.second-text p {
+    font-size: 15px;
+    line-height: 1.3rem;
+
+}
+
+/* Form Styles */
+input,
+select {
+    height: 40px;
+    width: 100%;
+    background-color: #121217;
+    color: white;
+    margin: 10px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#inputwidth {
+    width: 100%;
+    height: 40px;
+}
+
+.bookingbtn {
+    width: 100%;
+    background-color: #ca8e46;
+    color: white;
+    border: solid;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookingbtn:hover {
+    background-color: #121217;
+}
+
+@media (max-width: 1024px) {
+    .second {
+        flex-direction: column;
+        padding: 2rem;
+        height: 100vh;
+    }
+
+    .booktable,
+    .second-text {
+        width: 90%;
+
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .second {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .booktable {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .booktable h1,
+    .second-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .second-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .border {
+        width: 30px;
+    }
+}
+
+/* TodaySpecial */
+.TodaySpecial {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TodaySpecial h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1rem;
+}
+
+.TodaySpecial h3 {
+    font-size: 20px;
+    color: #ffb255;
+    font-family: cursive;
+    letter-spacing: 0.2rem;
+
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+.card {
+    width: 250px;
+    margin: 20px;
+    border: solid 1px rgb(205, 202, 202);
+    border-radius: 8px;
+
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;/* Ensures images fill the container without stretching */
+    border-radius: 8px;
+}
+
+.card h4 {
+    margin-top: 10px;
+}
+
+.card li {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media (max-width:1080px) {
+    .TodaySpecial {
+        height: 100vh;
+    }
+}
+
+@media (max-width:540px) {
+    .TodaySpecial {
+        height: 150vh;
+    }
+}
+
+@media (max-width:1190px) {
+    .card {
+
+        margin: 10px;
+    }
+
+}
+
+/* ourmenu */
+
+.ourmenu {
+    background-color: #121217;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.box-container {
+    display: flex;
+}
+
+.box {
+    padding: 5px 10px 5px 10px;
+    border: solid 1px white;
+    margin: 10px;
+}
+
+#box {
+    border: solid 1px #ffb255;
+    color: #ffb255;
+}
+
+.ourmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-menu-secone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-menu-secone h1 {
+    font-size: 30px;
+    letter-spacing: 0.3rem;
+}
+
+.our-menu-secone h3 {
+    margin-top: 20px;
+    color: #ffb255;
+    font-family: cursive;
+}
+
+.box-container {
+    margin-top: 20px;
+}
+
+.item1 {
+    width: 470px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.img {
+    height: 90px;
+    width: 90px;
+
+}
+
+.img img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    /* Ensures images fill the container without stretching */
+    border-radius: 50px;
+}
+
+.itemdetails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.txtcontainer {
+    width: 350px;
+}
+
+.txtcontainer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.416);
+}
+
+.txtcontainer2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txtcontainer2 li {
+    color: #ca8e46;
+
+}
+
+@media screen and (max-width:1024) {
+    .ourmenu {
+        height: fit-content;
+        height: 200vh;
+    }
+
+    .itemdetails {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ourchef */
+
+.ourchef {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(18, 17, 17);
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourchef h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1rem;
+}
+
+.ourchef h3 {
+    font-size: 20px;
+    color: #ffb255;
+    font-family: cursive;
+    letter-spacing: 0.2rem;
+
+}
+
+#crd h4 {
+    font-size: 12px;
+    color: #91919190;
+    margin-top: 5px;
+}
+#crd p{
+    color: #d0cfcf;
+    font-size: 14px;
+}
+#readmore{
+    color: #ca8e46;
+    font-size: 13px;
+}
+
+@media (max-width:1080px) {
+    .ourchef {
+        height: 100vh;
+    }
+}
+
+@media (max-width:540px) {
+    .ourchef {
+        height: 150vh;
+    }
+}
+
+/* footer */
+footer{
+    background-color: #121217;
+    color: white;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerlogo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 180px;
+}
+.footerlogo img{
+    width: 100%;
+    height: 70px;
+    object-fit: fill;/* Ensures images fill the container without stretching */
+   
+}
+.footericons i{
+    margin-right: 10px;
+}
+@media screen and (max-width:944px) {
+    footer{
+        flex-direction: column;
+
+    }
+    .footerlogo{
+        margin-right: 0px;
+    }
+}
